@@ -36,9 +36,30 @@ const team = [
 
 //TODO 2: 
 //* genero numeri casuali per assegnare valori alle proprietà punti e falli
+for (let i = 0; i < team.length; i++) {
+    team[i].pointsScored = (Math.floor(Math.random() * 10) + 1 );
+    team[i].foulsSuffered = (Math.floor(Math.random() * 5) + 1);
+}
 //TODO 3: 
 //* creo un nuovo array contenente solo:
 //* nome: stringa
 //* falli subiti: numero
+const foulsTeam = team.map(team => {
+    return {
+        teamName: team.teamName,
+        foulsSuffered: team.foulsSuffered
+    };
+});
+//! .MAP (SOSTITUISCE CICLO FOR!)
+//! Itera automaticamente su ogni elemento dell'arry originale 
+// //*(passa attraverso ogni elemento dell'array team)
+//! Applica una funzione a ciascun elemento
+//* per ogni squadra crea un nuovo oggetto con solo nome e efalli subiti 
+//! Restituisce un nuovo array con gli elemneti dell'array precedente trasformati o modificati dalla funzione applicata
+//* restituisce il nuovo array foulsTeam che contiene solo nome e falli subiti
+
 //TODO 4:
 //* stampo entrambi gli array
+console.log(`Squadre originali:`, team);
+console.log(`Nuovo Array con Nome e Falli subiti:`, foulsTeam);
+
