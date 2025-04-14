@@ -44,6 +44,15 @@ for (let i = 0; i < team.length; i++) {
 //* creo un nuovo array contenente solo:
 //* nome: stringa
 //* falli subiti: numero
+
+// const foulsTeam = [];
+// for (let i = 0; i < team.length; i++) {
+//     const teams = team[i];
+//     foulsTeam.push({
+//         teamName: team.teamName,
+//         foulsSuffered: team.foulsSuffered
+//     })
+// }
 const foulsTeam = team.map(team => {
     return {
         teamName: team.teamName,
